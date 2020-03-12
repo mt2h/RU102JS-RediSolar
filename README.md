@@ -28,6 +28,13 @@ This should start a live reloading server that uses [nodemon](https://www.npmjs.
 http://localhost:8081/
 ```
 
+To start redis locally use the next commad:
+```
+launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+```
+
+[Redis on mac documentation](https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298)
+
 # Configuration 
 
 The application uses a configuration file, `config.json` to specify the port that it listens 
