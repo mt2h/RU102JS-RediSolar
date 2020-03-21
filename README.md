@@ -30,7 +30,7 @@ http://localhost:8081/
 
 To start redis locally use the next commad:
 ```
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+redis-server /usr/local/etc/redis.conf
 ```
 
 [Redis on mac documentation](https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298)
