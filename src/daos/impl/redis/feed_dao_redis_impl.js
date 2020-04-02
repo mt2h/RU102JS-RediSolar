@@ -127,8 +127,8 @@ const insert = async (meterReading) => {
   // START Challenge #6
   const globalFeedKey = keyGenerator.getGlobalFeedKey();
   const feedKey = keyGenerator.getFeedKey(meterReading.siteId);
-  pipeline.xaddAsync(globalFeedKey, '*', ...fields);
-  pipeline.xaddAsync(feedKey, '*', ...fields);
+  pipeline.xadd(keyGenerator.getGlobalFeedKey(), 'MAXLEN', '~', globalMaxFeedLength, '*', ...fields);
+  pipeline.xadd(keyGenerator.getFeedKey(meterReading.siteId), 'MAXLEN', '~', siteMaxFeedLength, '*', ...fields);
 
   // END Challenge #6
 
